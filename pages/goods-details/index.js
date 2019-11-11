@@ -29,6 +29,9 @@ Page({
 
     openShare: false
   },
+  handleContact(e){
+    console.log(e);
+  },
   swiperchange:function(){},
   async onLoad(e) {
     if (e && e.scene) {
