@@ -36,6 +36,7 @@ App({
         }
       }
     });
+
     /**
      * 监听网络状态变化
      * 可根据业务需求进行调整
@@ -63,6 +64,7 @@ App({
     //  获取商城名称
     WXAPI.queryConfigBatch('mallName,recharge_amount_min,ALLOW_SELF_COLLECTION,RECHARGE_OPEN').then(function(res) {
       if (res.code == 0) {
+        console.log(res);
         res.data.forEach(config => {
           wx.setStorageSync(config.key, config.value);
           if (config.key === 'recharge_amount_min') {

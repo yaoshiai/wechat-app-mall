@@ -29,6 +29,7 @@ Page({
 
     openShare: false
   },
+  swiperchange:function(){},
   async onLoad(e) {
     if (e && e.scene) {
       const scene = decodeURIComponent(e.scene) // 处理扫码进商品详情页面的逻辑
