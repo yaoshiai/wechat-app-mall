@@ -232,8 +232,10 @@ Page({
   hideInput: function () {
     this.setData({
       inputVal: "",
-      inputShowed: false
+      inputShowed: false,
+      curPage: 1
     });
+    this.getGoodsList(this.data.activeCategoryId);
   },
   clearInput: function () {
     this.setData({
